@@ -1,0 +1,31 @@
+{
+  "name": "academia-update-app",
+  "displayName": "Academia Update",
+  "version": "1.0.0",
+  "description": "Aplicacion movil Cordova para Academia Update.",
+  "main": "index.js",
+  "scripts": {
+    "build:android": "cordova build android",
+    "requirements": "cordova requirements android"
+  },
+  "dependencies": {
+    "cordova-android": "^13.0.0",
+    "cordova-plugin-inappbrowser": "^6.0.0",
+    "cordova-plugin-network-information": "^3.0.0",
+    "cordova-plugin-statusbar": "^4.0.0"
+  },
+  "devDependencies": {
+    "cordova": "^12.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-statusbar": {}
+    }
+  },
+  "private": true
+}

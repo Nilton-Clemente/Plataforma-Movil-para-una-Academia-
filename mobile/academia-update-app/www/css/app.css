@@ -1,0 +1,504 @@
+﻿:root {
+    --bg: #f6f7fb;
+    --surface: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --nav: #111827;
+    --brand: #0d6efd;
+    --brand-dark: #0b5ed7;
+    --danger: #dc3545;
+    --success: #0f766e;
+    --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    --soft-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-size: 22px;
+    line-height: 1.15;
+}
+
+h2 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+h3 {
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.app-shell {
+    min-height: 100vh;
+    padding-bottom: 78px;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    min-height: 76px;
+    padding: 12px 16px;
+    background: var(--nav);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.brand-mark {
+    width: 60px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.brand-mark img {
+    max-width: 60px;
+    max-height: 52px;
+    object-fit: contain;
+}
+
+.topbar-title {
+    min-width: 0;
+}
+
+.eyebrow {
+    margin: 0 0 3px;
+    color: #cbd5e1;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.content {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.icon-button,
+.button {
+    border: 0;
+    border-radius: 8px;
+    background: var(--brand);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.icon-button {
+    min-width: 58px;
+    height: 38px;
+    padding: 0 10px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    font-size: 12px;
+}
+
+.button {
+    width: 100%;
+    min-height: 46px;
+    padding: 13px 14px;
+    box-shadow: 0 10px 22px rgba(13, 110, 253, 0.18);
+}
+
+.button.secondary {
+    background: #e5e7eb;
+    color: var(--text);
+    box-shadow: none;
+}
+
+.button.danger {
+    background: var(--danger);
+    box-shadow: 0 10px 22px rgba(220, 53, 69, 0.16);
+}
+
+.button:disabled {
+    opacity: .6;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.stack {
+    display: grid;
+    gap: 14px;
+}
+
+.grid {
+    display: grid;
+    gap: 14px;
+}
+
+.hero,
+.card,
+.blog-card,
+.book-card,
+.cart-row,
+.notice,
+.auth-card,
+.panel-card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.hero {
+    overflow: hidden;
+    background: var(--nav);
+    color: #fff;
+}
+
+.hero img,
+.gallery-grid img,
+.section-image,
+.map-preview {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.hero img {
+    aspect-ratio: 16 / 9;
+}
+
+.hero-body {
+    padding: 18px;
+}
+
+.hero-body p {
+    color: #d1d5db;
+}
+
+.hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.card,
+.blog-card,
+.book-card,
+.cart-row,
+.notice,
+.auth-card,
+.panel-card {
+    padding: 16px;
+}
+
+.section-image {
+    margin-top: 12px;
+    aspect-ratio: 16 / 10;
+    border-radius: 8px;
+}
+
+.section-kicker {
+    margin-bottom: 4px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    aspect-ratio: 1;
+    border-radius: 6px;
+    box-shadow: var(--soft-shadow);
+}
+
+.blog-card {
+    overflow: hidden;
+    box-shadow: var(--soft-shadow);
+}
+
+.blog-image {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.blog-body {
+    padding: 16px;
+}
+
+.blog-body p:last-child {
+    margin-bottom: 0;
+}
+
+.field {
+    display: grid;
+    gap: 6px;
+}
+
+.field span {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px;
+    background: #fff;
+    color: var(--text);
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: var(--brand);
+    outline: 3px solid rgba(13, 110, 253, 0.12);
+}
+
+.auth-card {
+    margin-top: 10px;
+}
+
+.book-card {
+    display: grid;
+    gap: 12px;
+    box-shadow: var(--soft-shadow);
+}
+
+.book-head {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+}
+
+.book-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: var(--nav);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.book-purchase {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.book-purchase .button {
+    width: auto;
+    min-width: 108px;
+}
+
+.price,
+.total {
+    color: var(--success);
+    font-weight: 900;
+}
+
+.price {
+    margin: 0;
+    font-size: 20px;
+}
+
+.cart-row {
+    display: grid;
+    gap: 12px;
+}
+
+.cart-title-row,
+.summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.summary-row {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.summary-row:last-child {
+    border-bottom: 0;
+}
+
+.qty {
+    display: grid;
+    grid-template-columns: 44px 1fr 44px;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty button {
+    height: 40px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.qty span {
+    text-align: center;
+    font-weight: 900;
+}
+
+.loader {
+    padding: 44px 16px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.loader::before {
+    content: "";
+    width: 34px;
+    height: 34px;
+    display: block;
+    margin: 0 auto 14px;
+    border: 4px solid #dbeafe;
+    border-top-color: var(--brand);
+    border-radius: 50%;
+    animation: spin .9s linear infinite;
+}
+
+.tabbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    border-top: 1px solid var(--line);
+    background: #fff;
+    box-shadow: 0 -8px 22px rgba(15, 23, 42, 0.08);
+}
+
+.tab {
+    height: 66px;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.tab span {
+    display: inline-grid;
+    min-width: 46px;
+    min-height: 34px;
+    place-items: center;
+    border-radius: 8px;
+}
+
+.tab.active {
+    color: var(--brand-dark);
+}
+
+.tab.active span {
+    background: #eaf2ff;
+}
+
+.map-preview {
+    min-height: 190px;
+    border: 0;
+    border-radius: 8px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 680px) {
+    .content {
+        padding: 22px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 380px) {
+    .topbar {
+        grid-template-columns: 54px minmax(0, 1fr) auto;
+        padding-inline: 12px;
+    }
+
+    .brand-mark,
+    .brand-mark img {
+        width: 52px;
+    }
+
+    .hero-actions,
+    .book-purchase {
+        grid-template-columns: 1fr;
+    }
+
+    .book-purchase .button {
+        width: 100%;
+    }
+}

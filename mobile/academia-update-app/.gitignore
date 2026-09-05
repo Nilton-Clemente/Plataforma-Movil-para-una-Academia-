@@ -1,0 +1,17 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+
+# Cordova (generado, se regenera con "cordova prepare")
+/platforms/
+/plugins/
+
+# Logs
+*.log
+
+# IDE
+.idea/
+.vscode/

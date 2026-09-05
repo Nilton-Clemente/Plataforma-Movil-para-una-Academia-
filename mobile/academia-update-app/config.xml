@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.academiaupdate.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Academia Update</name>
+    <description>Aplicacion movil de Academia Update.</description>
+    <author email="soporte@academiaupdate.com" href="https://academiaupdate.com">Academia Update</author>
+    <content src="index.html" />
+    <access origin="https://*" />
+    <allow-navigation href="https://*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="mailto:*" />
+    <preference name="android-minSdkVersion" value="23" />
+    <preference name="android-targetSdkVersion" value="36" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#111827" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <platform name="android">
+        <preference name="AndroidXEnabled" value="true" />
+    </platform>
+</widget>

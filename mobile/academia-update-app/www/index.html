@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: gap:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https:; img-src 'self' https: data:; connect-src 'self' https:; frame-src https:;">
+    <title>Academia Update</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="brand-mark">
+                <img id="brand-logo" src="" alt="Academia Update">
+            </div>
+            <div class="topbar-title">
+                <p class="eyebrow">Academia Update</p>
+                <h1 id="screen-title">Inicio</h1>
+            </div>
+            <button id="session-action" class="icon-button" type="button" aria-label="Sesion">...</button>
+        </header>
+
+        <main id="app" class="content" aria-live="polite"></main>
+
+        <nav class="tabbar" aria-label="Navegacion principal">
+            <button class="tab active" data-screen="home" type="button"><span>Inicio</span></button>
+            <button class="tab" data-screen="gallery" type="button"><span>Galeria</span></button>
+            <button class="tab" data-screen="blog" type="button"><span>Blog</span></button>
+            <button class="tab" data-screen="store" type="button"><span>Tienda</span></button>
+            <button class="tab" data-screen="cart" type="button"><span>Carrito</span></button>
+            <button class="tab" data-screen="profile" type="button"><span>Perfil</span></button>
+        </nav>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
